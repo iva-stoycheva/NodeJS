@@ -19,8 +19,6 @@ app.get('/', (req, res) => {
 
 app.post('/getexpression', (req, res) => {
     const expression = req.body.expression;
-    //const result = math.evaluate(String(expression));
-    //res.send(`${result}`);
     res.render('index', {result : math.evaluate(expression)})
 });
 
